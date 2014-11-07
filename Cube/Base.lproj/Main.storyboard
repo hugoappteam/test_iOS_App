@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s73-OK-asd">
+                                <rect key="frame" x="155" y="483" width="75" height="30"/>
+                                <color key="backgroundColor" red="0.60000002384185791" green="0.60000002384185791" blue="0.60000002384185791" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Say Hello!">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="pressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yne-sE-00G"/>
+                                </connections>
+                            </button>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="80" verticalCompressionResistancePriority="80" fixedFrame="YES" image="Schwarzer_Punkt.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="FyG-8W-ynR" userLabel="Center">
+                                <rect key="frame" x="152" y="260" width="80" height="80"/>
+                            </imageView>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="80" verticalCompressionResistancePriority="80" fixedFrame="YES" image="Schwarzer_Punkt.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="D2F-hl-XBB" userLabel="lowerRight">
+                                <rect key="frame" x="72" y="340" width="80" height="80"/>
+                            </imageView>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="80" verticalCompressionResistancePriority="80" fixedFrame="YES" image="Schwarzer_Punkt.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Xe5-fm-kch" userLabel="lowerLeft">
+                                <rect key="frame" x="232" y="340" width="80" height="80"/>
+                            </imageView>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="80" verticalCompressionResistancePriority="80" fixedFrame="YES" image="Schwarzer_Punkt.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="ErV-n6-VAJ" userLabel="LowerCenter">
+                                <rect key="frame" x="152" y="340" width="80" height="80"/>
+                            </imageView>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="80" verticalCompressionResistancePriority="80" fixedFrame="YES" image="Schwarzer_Punkt.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="vQs-zW-J73" userLabel="upperRight">
+                                <rect key="frame" x="232" y="180" width="80" height="80"/>
+                            </imageView>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="80" verticalCompressionResistancePriority="80" fixedFrame="YES" image="Schwarzer_Punkt.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="cl8-0d-jVO" userLabel="upperCenter">
+                                <rect key="frame" x="152" y="180" width="80" height="80"/>
+                            </imageView>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="80" verticalCompressionResistancePriority="80" fixedFrame="YES" image="Schwarzer_Punkt.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="4S2-68-nV3" userLabel="upperLleft">
+                                <rect key="frame" x="72" y="180" width="80" height="80"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="point1" destination="4S2-68-nV3" id="0eP-WY-g4a"/>
+                        <outlet property="point2" destination="cl8-0d-jVO" id="KH5-To-Uxk"/>
+                        <outlet property="point3" destination="vQs-zW-J73" id="hoG-2d-vwh"/>
+                        <outlet property="point4" destination="FyG-8W-ynR" id="JoJ-b5-Din"/>
+                        <outlet property="point5" destination="D2F-hl-XBB" id="iQh-ZD-e6K"/>
+                        <outlet property="point6" destination="ErV-n6-VAJ" id="72j-1X-Zf3"/>
+                        <outlet property="point7" destination="Xe5-fm-kch" id="lJG-Wo-lFA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-374" y="-83"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Schwarzer_Punkt.jpg" width="420" height="420"/>
+    </resources>
+</document>
