@@ -84,8 +84,6 @@
         default:
             break;
     }
-
-    
 }
 
 
@@ -104,7 +102,6 @@
         NSLog(@"Durchlauf: '%d'", i);
     }
     });
-
 }
 
 @end
