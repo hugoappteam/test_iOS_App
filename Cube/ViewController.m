@@ -87,22 +87,35 @@
     }
 }
 
-
-- (IBAction)pressed:(id)sender {
+- (void) dice {
     dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
     dispatch_async(queue, ^{
-    int random;
-    for(int i = 0; i<=20; i++){
-    
-        random = arc4random_uniform(6)+1;
-
-        dispatch_async(dispatch_get_main_queue(), ^{[self show:random];} );
-
-        [NSThread sleepForTimeInterval:0.3];
-        
-        NSLog(@"Durchlauf: '%d'", i);
-    }
+        int random;
+        for(int i = 0; i<=20; i++){
+            
+            random = arc4random_uniform(6)+1;
+            
+            dispatch_async(dispatch_get_main_queue(), ^{[self show:random];} );
+            
+            [NSThread sleepForTimeInterval:0.3];
+            
+            NSLog(@"Durchlauf: '%d'", i);
+        }
     });
 }
+
+
+- (IBAction)pressed:(id)sender {
+    [self dice];
+}
+
+- (void) motionBegan:(UIEventSubtype)motion withEvent:(UIEvent *)event {
+    if (UIEventSubtypeMotionShake) {
+        NSLog(@"Shake event detected!");
+        [self dice];
+    }
+}
+
+
 
 @end
