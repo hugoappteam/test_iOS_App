@@ -20,6 +20,20 @@
     [super didReceiveMemoryWarning];
 }
 
+-(BOOL)canBecomeFirstResponder {
+    return YES;
+}
+
+-(void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    [self becomeFirstResponder];
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [self resignFirstResponder];
+    [super viewWillDisappear:animated];
+}
+
 
 -(void) show:(int) random{
     NSLog(@"Show aufgerufen! Random: '%d'", random);
@@ -87,22 +101,35 @@
     }
 }
 
-
-- (IBAction)pressed:(id)sender {
+-(void)dice{
     dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
     dispatch_async(queue, ^{
-    int random;
-    for(int i = 0; i<=20; i++){
-    
-        random = arc4random_uniform(6)+1;
-
-        dispatch_async(dispatch_get_main_queue(), ^{[self show:random];} );
-
-        [NSThread sleepForTimeInterval:0.3];
-        
-        NSLog(@"Durchlauf: '%d'", i);
-    }
+        int random;
+        for(int i = 0; i<=20; i++){
+            NSLog(@"Durchlauf: '%d'", i);
+            
+            random = arc4random_uniform(6)+1;
+            
+            dispatch_async(dispatch_get_main_queue(), ^{[self show:random];} );
+            
+            [NSThread sleepForTimeInterval:0.3];
+            
+        }
     });
+
+}
+
+
+- (IBAction)pressed:(id)sender {
+    [self dice];
+    }
+
+- (void)motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event
+{
+    if (motion == UIEventSubtypeMotionShake)
+    {
+        [self dice];
+    }
 }
 
 @end
