@@ -20,7 +20,6 @@
     [super didReceiveMemoryWarning];
 }
 
-
 -(void) show:(int) random{
     NSLog(@"Show aufgerufen! Random: '%d'", random);
     switch (random) {
