@@ -24,6 +24,7 @@
 
     __weak IBOutlet UIImageView *point7;
 }
+
 - (IBAction)pressed:(id)sender;
 
 @end
