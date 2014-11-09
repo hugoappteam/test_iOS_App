@@ -101,7 +101,7 @@
     }
 }
 
--(void)dice{
+- (void) dice {
     dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
     dispatch_async(queue, ^{
         int random;
@@ -116,18 +116,16 @@
             
         }
     });
-
 }
 
 
 - (IBAction)pressed:(id)sender {
     [self dice];
-    }
+}
 
-- (void)motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event
-{
-    if (motion == UIEventSubtypeMotionShake)
-    {
+- (void) motionBegan:(UIEventSubtype)motion withEvent:(UIEvent *)event {
+    if (UIEventSubtypeMotionShake) {
+        NSLog(@"Shake event detected!");
         [self dice];
     }
 }
