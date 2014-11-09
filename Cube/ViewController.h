@@ -28,7 +28,6 @@
 
 - (IBAction)pressed:(id)sender;
 
--(void) show:(int)random;
 
 
 @end
